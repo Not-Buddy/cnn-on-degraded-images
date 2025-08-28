@@ -152,20 +152,20 @@ BATCH_SIZE = 100               # Optimized for CPU
 ### **Updated Dependencies (2025)**
 # One-command setup
 ```
-git clone https://github.com/prasunroy/cnn-on-degraded-images.git
+git clone https://github.com/Not-Buddy/cnn-on-degraded-images.git
 cd cnn-on-degraded-images
-python -m venv venv && source venv/bin/activate && pip install -r requirements.txt
+python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt
 ```
 
 ### **Quick Start**
 ```bash
 # Clone the updated repository
-python train_capsnet.py
+python3 train_capsnet.py
 
-python train_deepcnn.py
+python3 train_deepcnn.py
 
 # Run robustness testing
-python test.py
+python3 test.py
 ```
 
 ## 📈 Results & Compatibility
