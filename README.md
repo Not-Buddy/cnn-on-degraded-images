@@ -186,6 +186,9 @@ python3 -m venv venv && source venv/bin/activate && pip install -r requirements.
 ```
 
 ### **Quick Start**
+```bash 
+pip install git+https://github.com/prasunroy/mlutils.git
+```
 ```bash
 # Clone the updated repository
 python3 train_capsnet.py
