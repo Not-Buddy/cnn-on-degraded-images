@@ -89,6 +89,34 @@ cnn-on-degraded-images/
 └── 🧪 test.py                          # Robustness testing script (Updated 2025)
 ```
 
+##Kaggle dataset that needs to be downloaded
+
+```
+📊 Dataset Availability
+The datasets required for this project are publicly available on Kaggle and can be easily downloaded and set up following the project structure outlined above.
+
+🔢 Synthetic Digits Dataset
+Kaggle Link: https://www.kaggle.com/datasets/prasunroy/synthetic-digits
+
+This dataset contains 12,000 synthetically generated images of English digits (0-9) embedded on random backgrounds. The images feature:
+
+Varying fonts, colors, scales, and rotations
+
+Random backgrounds from COCO dataset subset
+
+Perfect for testing CNN robustness against image degradations
+
+🌿 Natural Images Dataset
+Kaggle Link: https://www.kaggle.com/datasets/prasunroy/natural-images
+
+This dataset contains 6,899 images from 8 distinct classes:
+
+Airplane, Car, Cat, Dog, Flower, Fruit, Motorbike, Person
+
+Compiled from various sources for comprehensive testing
+```
+
+
 ## 🔧 Key Technical Improvements
 
 ### **Capsule Network Fixes**
