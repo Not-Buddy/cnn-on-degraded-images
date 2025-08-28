@@ -38,6 +38,57 @@ This repository has been completely modernized and updated to work with **Tensor
 - **Path validation**: Automatic detection of available trained models
 - **Cross-platform compatibility**: Works on Windows, Linux, and macOS
 
+## Project Structure
+```
+cnn-on-degraded-images/
+│
+├── 📂 assets/                          # Project assets and resources<br/>
+│
+├── 📂 data/                            # Dataset storage
+│   ├── 📂 natural_images/              # Natural image datasets
+│   └── 📂 synthetic_digits/            # Synthetic digit datasets
+│       ├── 📂 imgs_train/              # Training images
+│       ├── 📂 imgs_valid/              # Validation images
+│       └── 📄 labelmap.json            # Class label mappings
+│
+├── 📂 libs/                            # Core library modules
+│   ├── 📂 __pycache__/                 # Python cache files
+│   ├── 📄 __init__.py                  # Package initialization
+│   ├── 🔧 CapsuleNetwork.py            # Capsule Network implementation (Updated 2025)
+│   ├── 🔧 DegradationModels.py         # Image degradation functions
+│   └── 🔧 PipelineUtils.py             # Training pipeline utilities
+│
+├── 📂 output/                          # Training outputs and results
+│   └── 📂 synthetic_digits/            # Results for synthetic digits dataset
+│       ├── 📂 __test__images__/        # Sample degraded test images
+│       ├── 📂 __test__top1__/          # Top-1 accuracy test results
+│       │   ├── 📊 clean_results.csv    # Baseline accuracy on clean images
+│       │   └── 📊 *.csv                # Robustness test results per degradation
+│       ├── 📂 __test__top3__/          # Top-3 accuracy test results  
+│       │   ├── 📊 top3_clean_results.csv # Baseline top-3 accuracy
+│       │   └── 📊 *.csv                # Top-3 robustness test results
+│       ├── 📂 capsnet/                 # ✅ Capsule Network results (Trained)
+│       │   ├── 📂 checkpoints/         # Model weights (.weights.h5)
+│       │   ├── 📂 logs/                # Training logs and CSV metrics
+│       │   ├── 📂 models/              # Model architecture (.json)
+│       │   └── 📂 tensorboard/         # TensorBoard visualization data
+│       └── 📂 mobilenet/               # ✅ MobileNet results (Trained)
+│           ├── 📂 checkpoints/         # Model weights (.weights.h5)
+│           ├── 📂 logs/                # Training logs and CSV metrics
+│           ├── 📂 models/              # Model architecture (.json)
+│           └── 📂 tensorboard/         # TensorBoard visualization data
+│
+├── 📂 venv/                            # Python virtual environment
+│
+├── 📄 .gitignore                       # Git ignore rules
+├── 📄 LICENSE                          # MIT License
+├── 📄 README.md                        # Project documentation
+│
+├── 🚀 train_capsnet.py                 # Capsule Network training script (Updated 2025)
+├── 🚀 train_deepcnn.py                 # CNN architectures training script (Updated 2025)
+└── 🧪 test.py                          # Robustness testing script (Updated 2025)
+```
+
 ## 🔧 Key Technical Improvements
 
 ### **Capsule Network Fixes**
@@ -99,26 +150,18 @@ BATCH_SIZE = 100               # Optimized for CPU
 ## 🛠 Installation & Requirements
 
 ### **Updated Dependencies (2025)**
-```bash
-# Python 3.8+ required
-pip install tensorflow>=2.15.0
-pip install numpy pandas matplotlib opencv-python
-pip install scikit-learn tqdm
+# One-command setup
+```
+git clone https://github.com/prasunroy/cnn-on-degraded-images.git
+cd cnn-on-degraded-images
+python -m venv venv && source venv/bin/activate && pip install -r requirements.txt
 ```
 
 ### **Quick Start**
 ```bash
 # Clone the updated repository
-git clone https://github.com/prasunroy/cnn-on-degraded-images.git
-cd cnn-on-degraded-images
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Train Capsule Network (optimized for CPU)
 python train_capsnet.py
 
-# Train CNN architectures
 python train_deepcnn.py
 
 # Run robustness testing
@@ -190,3 +233,4 @@ For issues related to the 2025 updates, please check:
 
 **Original Research Paper**: Effects of Degradations on Deep Neural Network Architectures  
 **Updated Implementation**: August 2025 - TensorFlow 2.x/Keras 3.x Compatible
+
