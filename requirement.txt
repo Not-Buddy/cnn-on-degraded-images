@@ -1,0 +1,21 @@
+# requirements-extended.txt
+# Core dependencies (same as above)
+tensorflow==2.15.0
+keras==2.15.0
+numpy==1.24.3
+pandas==2.0.3
+scikit-learn==1.2.2
+opencv-python==4.7.0.72
+matplotlib==3.7.1
+tqdm==4.65.0
+h5py==3.9.0
+tensorflow-datasets==4.9.2
+
+# Extended dependencies for advanced features
+seaborn==0.12.2              # Enhanced plotting
+pillow==10.0.0               # Image processing utilities  
+jupyter==1.0.0               # Jupyter notebook support
+tensorboard==2.15.0          # TensorBoard visualization
+plotly==5.15.0               # Interactive plots
+scipy==1.10.1                # Scientific computing
+imageio==2.31.1              # Image I/O operations
