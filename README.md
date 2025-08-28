@@ -182,9 +182,15 @@ BATCH_SIZE = 100               # Optimized for CPU
 ```
 git clone https://github.com/Not-Buddy/cnn-on-degraded-images.git
 cd cnn-on-degraded-images
-python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt
+python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt && mkdir data
 ```
-
+### Now put all the data from into data/
+```link
+https://www.kaggle.com/datasets/prasunroy/natural-images
+```
+```link
+https://www.kaggle.com/datasets/prasunroy/synthetic-digits
+```
 ### **Quick Start**
 ```bash 
 pip install git+https://github.com/prasunroy/mlutils.git
